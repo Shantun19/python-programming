@@ -21,7 +21,6 @@ def isAmstrongNumber(num):
         lastDigit = temp % 10
         totalSum = totalSum + findSum(lastDigit , totalDigits)
         temp = temp // 10
-    
     return num == totalSum
 
 def isAmstrongNumberUsingString(num):
@@ -31,9 +30,9 @@ def isAmstrongNumberUsingString(num):
     digits = len(numberString)
     result = 0
     for i in numberString:
+        # convert the number into the string and use the exponent operation
         result = result + int(i)**digits
     return result == num
-
 
 if __name__ == "__main__":
     num = int(input("Enter any Integer value "))
